@@ -1,0 +1,86 @@
+[
+    {
+        "text": "What a nice hat?",
+        "sentiment": "positive"
+    },
+    {
+        "text": "Just happened a terrible car crash",
+        "sentiment": "negative"
+    },
+    {
+        "text": "They'd probably still show more life than Arsenal did yesterday, eh? EH?",
+        "sentiment": "neutral"
+    },
+    {
+        "text": "Heard about #earthquake is different cities, stay safe everyone.",
+        "sentiment": "neutral"
+    },
+    {
+        "text": "there is a forest fire at spot pond, geese are fleeing across the street, I cannot save them all",
+        "sentiment": "negative"
+    },
+    {
+        "text": "Fuck off!",
+        "sentiment": "negative"
+    },
+    {
+        "text": "Apocalypse lighting. #Spokane #wildfires",
+        "sentiment": "negative"
+    },
+    {
+        "text": "We're shaking...It's an earthquake",
+        "sentiment": "negative"
+    },
+    {
+        "text": "Hey! How are you?",
+        "sentiment": "positive"
+    },
+    {
+        "text": "No I don't like cold!",
+        "sentiment": "negative"
+    },
+    {
+        "text": "#PreviouslyOnDoyinTv: Toke Makinwa\u00c2\u0089\u00c3\u009b\u00c2\u00aas marriage crisis sets Nigerian Twitter ablaze... http://t.co/CMghxBa2XI",
+        "sentiment": "negative"
+    },
+    {
+        "text": "What if?!",
+        "sentiment": "neutral"
+    },
+    {
+        "text": "Awesome!",
+        "sentiment": "negative"
+    },
+    {
+        "text": "Birmingham Wholesale Market is ablaze BBC News - Fire breaks out at Birmingham's Wholesale Market http://t.co/irWqCEZWEU",
+        "sentiment": "negative"
+    },
+    {
+        "text": "NOOOOOOOOO! Don't do that!",
+        "sentiment": "negative"
+    },
+    {
+        "text": "@sunkxssedharry will you wear shorts for race ablaze ?",
+        "sentiment": "positive"
+    },
+    {
+        "text": "Typhoon Soudelor kills 28 in China and Taiwan",
+        "sentiment": "negative"
+    },
+    {
+        "text": "good!",
+        "sentiment": "positive"
+    },
+    {
+        "text": "No don't tell me that!",
+        "sentiment": "negative"
+    },
+    {
+        "text": "Awesome!",
+        "sentiment": "positive"
+    },
+    {
+        "text": "I am happy",
+        "sentiment": "positive"
+    }
+]

@@ -1,0 +1,18 @@
+- Prompt: Classify the sentiment of the given sentence, which is the last line. Follow the instruction in each step, and wait until i tell you to give the final output. The final output should only be in one of the tree options(positive, negative and neutral)
+    - Step 1. learn from the training data. The training data has four column, which is the text, selected text and sentiment(which is the goal).
+        - Sub-step a. learn from the training data of how it selected those key text
+        - Sub-step b. learn from the training data of how it classify based on the key selected text
+
+        The training data has column: text, selected text and sentiment classification. They are splitted by big space
+         I`d have responded, if I were going	I`d have responded, if I were going	neutral
+         Sooo SAD I will miss you here in San Diego!!!	Sooo SAD	negative
+         2am feedings for the baby are fun when he is all smiles and coos	fun	positive
+
+
+    - Step 2. Read the last line, which is the testing data and text that you need to do sentiment classification.
+
+    - Step 3. Now, from what you have learned from step one, you are going to select the key text from the given testing data(you read from step 2). You can generate three sets of possible selected text. Then analyze and evaluate those three selected text, decide which one is the most promising, and use it for the next step
+
+    - Step 4. From the selected text that you decide from step 3, now classify the sentiment. You can generate three possible sentiments. Make sure the sentiment will only come out of the three options (positive, negative and neutral). Then analyze and evaluate those three sentiments, decide which one is the most promising, and use it for the next step
+
+    - Step 5. Now you have got the most promising sentiment, you can give the final output now. Make sure the final output is a single word, either "positive", "negative" or "neutral". Do not use any other words, phrases or sentences, only the exact word "positive", "negative" or "neutral".

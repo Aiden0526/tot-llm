@@ -4,12 +4,14 @@ import json
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from retrying import retry
+import argparse
 
-openai.api_key = "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"
+# openai.api_key = "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"
 
 ##断点重爬api
 @retry(stop_max_attempt_number=3,wait_fixed=2000)
-def classify(prompt):
+def classify(prompt,api_key):
+    openai.api_key = api_key
     try:
         response = openai.Completion.create(
             model="text-davinci-003",
@@ -23,17 +25,17 @@ def classify(prompt):
         print("There is an error: ", e)
         return "neutral"
 
-def thread_task(row, myprompt):
+def thread_task(row, myprompt,api_key):
     text = row['text']
     combined_prompt = f"{myprompt} \n\n###\n\n{text}"
-    sentiment = classify(combined_prompt)
+    sentiment = classify(combined_prompt,api_key)
     return {
         "text": text,
         "sentiment": postprocess(sentiment)
     }
 
 
-def sentiment_classification(test_file_path,myprompt,n_thread = 10):
+def sentiment_classification(test_file_path,myprompt,api_key,n_thread = 10):
 
     # Load the test data
     test_df = pd.read_csv(test_file_path,encoding='latin-1')
@@ -42,7 +44,7 @@ def sentiment_classification(test_file_path,myprompt,n_thread = 10):
 
     ## run the thread task under thread pool
     with ThreadPoolExecutor(max_workers=n_thread) as e:
-        futures = {e.submit(thread_task, row, myprompt): row for _, row in test_df.iterrows()}
+        futures = {e.submit(thread_task, row, myprompt,api_key): row for _, row in test_df.iterrows()}
         for future in as_completed(futures):
             myresult = future.result()
             if myresult is not None:
@@ -74,13 +76,27 @@ def postprocess(sentiment):
     return "neutral"
 
 
-# Specify the paths of testing CSV files
-test_file_path = "/Users/aidenxu/Documents/zhangyue_research_intern/test.csv"
 
-prompt_file = 'prompt.txt'
-with open(prompt_file,'r') as f:
-    myprompt = f.read()
+def parse_arge():
+    args = argparse.ArgumentParser()
+    args.add_argument('--api_key',required=True,help='Enter your OpenAi API key')
+    args.add_argument('--test_file',required=True,help='Enter the test file path that you want to test')
+
+    args = args.parse_args()
+    return args
 
 
-# run the classification function
-sentiment_classification(test_file_path, myprompt)
+
+if __name__ == '__main__':
+    args = parse_arge()
+    # Specify the paths of testing CSV files
+    api_key = args.api_key
+    test_file_path = args.test_file
+
+    prompt_file = 'prompt.txt'
+    with open(prompt_file,'r') as f:
+        myprompt = f.read()
+
+
+    # run the classification function
+    sentiment_classification(test_file_path, myprompt,api_key)

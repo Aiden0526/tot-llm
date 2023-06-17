@@ -1,10 +1,18 @@
 [
     {
-        "text": "Fuck off!",
+        "text": "They'd probably still show more life than Arsenal did yesterday, eh? EH?",
+        "sentiment": "neutral"
+    },
+    {
+        "text": "Just happened a terrible car crash",
         "sentiment": "negative"
     },
     {
         "text": "Heard about #earthquake is different cities, stay safe everyone.",
+        "sentiment": "neutral"
+    },
+    {
+        "text": "Hey! How are you?",
         "sentiment": "neutral"
     },
     {
@@ -16,23 +24,19 @@
         "sentiment": "positive"
     },
     {
-        "text": "Just happened a terrible car crash",
+        "text": "Fuck off!",
         "sentiment": "negative"
-    },
-    {
-        "text": "Hey! How are you?",
-        "sentiment": "positive"
     },
     {
         "text": "there is a forest fire at spot pond, geese are fleeing across the street, I cannot save them all",
         "sentiment": "negative"
     },
     {
-        "text": "They'd probably still show more life than Arsenal did yesterday, eh? EH?",
-        "sentiment": "neutral"
+        "text": "We're shaking...It's an earthquake",
+        "sentiment": "negative"
     },
     {
-        "text": "Typhoon Soudelor kills 28 in China and Taiwan",
+        "text": "Birmingham Wholesale Market is ablaze BBC News - Fire breaks out at Birmingham's Wholesale Market http://t.co/irWqCEZWEU",
         "sentiment": "negative"
     },
     {
@@ -40,7 +44,19 @@
         "sentiment": "negative"
     },
     {
-        "text": "We're shaking...It's an earthquake",
+        "text": "@sunkxssedharry will you wear shorts for race ablaze ?",
+        "sentiment": "neutral"
+    },
+    {
+        "text": "No don't tell me that!",
+        "sentiment": "negative"
+    },
+    {
+        "text": "Awesome!",
+        "sentiment": "positive"
+    },
+    {
+        "text": "Typhoon Soudelor kills 28 in China and Taiwan",
         "sentiment": "negative"
     },
     {
@@ -52,27 +68,11 @@
         "sentiment": "neutral"
     },
     {
-        "text": "Birmingham Wholesale Market is ablaze BBC News - Fire breaks out at Birmingham's Wholesale Market http://t.co/irWqCEZWEU",
-        "sentiment": "negative"
-    },
-    {
         "text": "No I don't like cold!",
         "sentiment": "negative"
     },
     {
-        "text": "No don't tell me that!",
-        "sentiment": "negative"
-    },
-    {
         "text": "I am happy",
-        "sentiment": "positive"
-    },
-    {
-        "text": "@sunkxssedharry will you wear shorts for race ablaze ?",
-        "sentiment": "neutral"
-    },
-    {
-        "text": "Awesome!",
         "sentiment": "positive"
     },
     {

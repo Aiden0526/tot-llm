@@ -16,7 +16,7 @@ def classify(prompt,api_key):
         response = openai.Completion.create(
             model="text-davinci-003",
             prompt=prompt,
-            temperature=.7,
+            temperature=.3,
             max_tokens=32,
         )
 
@@ -58,7 +58,7 @@ def sentiment_classification(test_file_path,myprompt,api_key,n_thread = 10):
 
 
 
-    print("Sentiment classification completed. Results saved to sentiment_classification_results.json")
+    print("Sentiment classification completed. Results are saved to sentiment_classification_results.json")
 
 ## this function is to check whether one of the three sentiments is in the sentiment generated from the api to determine the final sentiment saved in the json file.
 def postprocess(sentiment):
@@ -89,7 +89,7 @@ def parse_arge():
 
 if __name__ == '__main__':
     args = parse_arge()
-    # Specify the paths of testing CSV files
+    # Specify the api key and paths of testing CSV files
     api_key = args.api_key
     test_file_path = args.test_file
 

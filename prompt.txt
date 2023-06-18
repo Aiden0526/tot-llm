@@ -11,8 +11,8 @@
 
     - Step 2. Read the last line, which is the testing data and text that you need to do sentiment classification.
 
-    - Step 3. Now, from what you have learned from step one, you are going to select the key text from the given testing data(you read from step 2). You can generate three sets of possible selected text. Then analyze and evaluate those three selected text, decide which one is the most promising, and use it for the next step
+    - Step 3. Now, from what you have learned from step one, you are going to select the key text from the given testing data(you read from step 2). You can generate three sets of possible selected text. When you generating the answer one by ont, please refine the next answer based on the previous answer and your prior knowledge. Then analyze and evaluate those three selected text, decide which one is the most promising, and use it for the next step
 
-    - Step 4. From the selected text that you decide from step 3, now classify the sentiment. You can generate three possible sentiments. Make sure the sentiment will only come out of the three options (positive, negative and neutral). Then analyze and evaluate those three sentiments, decide which one is the most promising, and use it for the next step
+    - Step 4. From the selected text that you decide from step 3, now classify the sentiment. You can generate three possible sentiments. Make sure the sentiment will only come out of the three options (positive, negative and neutral). When you generating the answer one by ont, please refine the next answer based on the previous answer and your prior knowledge. Then analyze and evaluate those three sentiments, decide which one is the most promising, and use it for the next step
 
     - Step 5. Now you have got the most promising sentiment, you can give the final output now. Make sure the final output is a single word, either "positive", "negative" or "neutral". Do not use any other words, phrases or sentences, only the exact word "positive", "negative" or "neutral".

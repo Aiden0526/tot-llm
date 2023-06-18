@@ -1,9 +1,38 @@
-# Read me
+# Sentiment analysis using LLM
 
-Sentiment analysis classficiation using OpenAI "text-davinci-003" model
+This program is for sentiment analysis and classification on a given dataset. The given text should be in .csv file and stored line by line. Three sentiment classification will be given: positive, negative and neutral. 
 
-Please specify your OpenAI API key and the path csv file of testing data in the run.sh. The default of the testing file is the one in current repository.
+## Prerequisites package:
+- openai
+- pandas
+- json
+- os
+- concurrent.futures
+- retrying
+- argparse
 
-Run ./run.sh to run the code. It will take in the test file and output the sentiment classification result in the "sentiment_classification_results.json" file.
+Make sure you have those packages ready before running the script. You can install them by this terminal command:
+
+'''
+pip install openai pandas json or concurrent retrying argparse
+'''
+
+
+Please also specify your OpenAI API key and the path csv file of testing data in the run.sh. The default of the testing file is the one in current repository.
+
+To run the script, use the following commend:
+
+'''
+./run.sh
+'''
+
+If permission got denied, type the following command and try running it again:
+'''
+chmod +x run.sh
+'''
+
+## Output
+The original text and the output will be stored one by one in the JSON file called "sentiment_classification_result.json".
+
 
 Feel free to contact jundong0526@gmail.com if you have any issue.

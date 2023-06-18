@@ -20,6 +20,7 @@ pip install openai pandas json or concurrent retrying argparse
 
 Please also specify your OpenAI API key and the path csv file of testing data in the run.sh. The default of the testing file is the one in current repository.
 
+## Run Script
 To run the script, use the following commend:
 
 '''

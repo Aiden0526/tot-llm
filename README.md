@@ -14,7 +14,7 @@ This program is for sentiment analysis and classification on a given dataset. Th
 Make sure you have those packages ready before running the script. You can install them by this terminal command:
 
 '''
-pip install openai pandas json or concurrent retrying argparse
+pip install openai pandas json os concurrent retrying argparse
 '''
 
 

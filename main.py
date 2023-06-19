@@ -6,7 +6,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from retrying import retry
 import argparse
 
-# openai.api_key = "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"
 
 ##断点重爬api
 @retry(stop_max_attempt_number=3,wait_fixed=2000)

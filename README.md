@@ -6,16 +6,15 @@ This program is for sentiment analysis and classification on a given dataset. Th
 - openai
 - pandas
 - json
-- os
 - concurrent.futures
 - retrying
 - argparse
 
-Make sure you have those packages ready before running the script. You can install them by this terminal command:
+Make sure you have those packages ready before running the script. You can install them in the requirements.txt or by this terminal command:
 
-'''
-pip install openai pandas json os concurrent retrying argparse
-'''
+```
+pip install openai pandas json concurrent retrying argparse
+```
 
 
 Please also specify your OpenAI API key and the path csv file of testing data in the run.sh. The default of the testing file is the one in current repository.
@@ -23,16 +22,16 @@ Please also specify your OpenAI API key and the path csv file of testing data in
 ## Run Script
 To run the script, use the following commend:
 
-'''
+```
 ./run.sh
-'''
+```
 
 If permission got denied, type the following command and try running it again:
 
 
-'''
+```
 chmod +x run.sh
-'''
+```
 
 ## Output
 The original text and the output will be stored one by one in the JSON file called "sentiment_classification_result.json".

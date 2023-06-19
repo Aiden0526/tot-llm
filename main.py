@@ -36,7 +36,6 @@ def thread_task(row, myprompt,api_key):
 
 def sentiment_classification(test_file_path,myprompt,api_key,n_thread = 10):
 
-    # Load the test data
     test_df = pd.read_csv(test_file_path,encoding='latin-1')
 
     sentiment_results = []
@@ -50,11 +49,13 @@ def sentiment_classification(test_file_path,myprompt,api_key,n_thread = 10):
                 sentiment_results.append(myresult)
 
         # Save the results to a JSON file
-    output_file = os.path.join(os.getcwd(),"sentiment_classification_results.json")
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    with open(output_file, "w") as f:
-        json.dump(sentiment_results, f,indent=4)
-
+    try:
+        output_file = os.path.join(os.getcwd(),"sentiment_classification_results.json")
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        with open(output_file, "w") as f:
+            json.dump(sentiment_results, f,indent=4)
+    except Exception as e:
+        print("The error is: ",e)
 
 
     print("Sentiment classification completed. Results are saved to sentiment_classification_results.json")
@@ -63,7 +64,6 @@ def sentiment_classification(test_file_path,myprompt,api_key,n_thread = 10):
 def postprocess(sentiment):
     sentiment = sentiment.lower()
 
-    # The valid sentiments
     expected_sentiments = ["positive", "negative", "neutral"]
 
     # Check if each valid sentiment is in the output
@@ -71,7 +71,6 @@ def postprocess(sentiment):
         if expected_sentiment in sentiment:
             return expected_sentiment
 
-    # If no valid sentiment is found, return a default
     return "neutral"
 
 

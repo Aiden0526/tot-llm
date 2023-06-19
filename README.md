@@ -16,7 +16,7 @@ Make sure you have those packages ready before running the script. You can insta
 pip install openai pandas json concurrent retrying argparse
 ```
 
-
+## Specify your OpenAI API key and test file path before running!!!
 Please also specify your OpenAI API key and the path csv file of testing data in the run.sh. The default of the testing file is the one in current repository.
 
 ## Run Script
